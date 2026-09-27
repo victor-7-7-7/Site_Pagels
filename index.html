@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111110">
+  <meta name="description" content="Jiu-Jitsu em Volta Redonda com Mestre Paulo Wesley Lopes. Conheça a Pagels: tradição desde 1993, aulas adultas, femininas e infantis. Agende sua aula experimental grátis.">
+  <meta property="og:title" content="Pagels Brazilian Jiu-Jitsu">
+  <meta property="og:description" content="Tradição, disciplina e excelência no Brazilian Jiu-Jitsu. Conheça a Pagels e agende sua aula.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:image" content="https://victor-7-7-7.github.io/Site_Pagels/assets/images/pagels-share.png">
+  <meta property="og:url" content="https://victor-7-7-7.github.io/Site_Pagels/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pagels Brazilian Jiu-Jitsu">
+  <meta name="twitter:description" content="Tradição, disciplina e excelência no Brazilian Jiu-Jitsu. Conheça a Pagels e agende sua aula.">
+  <meta name="twitter:image" content="https://victor-7-7-7.github.io/Site_Pagels/assets/images/pagels-share.png">
+  <title>Pagels Jiu-Jitsu</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/images/treino-hero.png?v=20260923-pegada" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script src="assets/js/config/supabase-config.js" defer></script>
+  <script src="assets/js/services/supabase-client.js" defer></script>
+  <script src="assets/js/services/agendamentos-service.js" defer></script>
+  <script src="assets/js/interface.js" defer></script>
+  <script src="assets/js/agendamento.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9S4 17 4 12V6l8-3Z"/><path d="m8 11 3 3 5-6"/></symbol>
+    <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M3 21v-4a6 6 0 0 1 12 0v4M16 4a3 3 0 0 1 0 6M17 13a5 5 0 0 1 4 5v3"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 10-13h-8l1-7Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.173.198-.297.298-.496.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.075-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.693.625.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884a9.82 9.82 0 0 1 7.02 2.91 9.83 9.83 0 0 1 2.9 7.025c-.003 5.45-4.437 9.884-9.924 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.555 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.48-8.413Z"/></symbol>
+  </svg>
+  <div class="announcement"><div class="container"><span>VOLTA REDONDA, RJ</span><span>Uma história no tatame. <strong>Desde 1993.</strong></span></div></div>
+  <header class="site-header" id="topo">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Pagels Jiu-Jitsu — início">
+        <span class="brand-emblem"><img src="assets/images/logo.webp" alt="" width="64" height="64"></span>
+        <span class="brand-copy"><strong>PAGELS</strong><small>BRAZILIAN JIU-JITSU</small></span>
+      </a>
+      <button class="menu-button" id="menuButton" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+        <a href="#historia">A academia</a>
+        <a href="#modalidades">Modalidades</a>
+        <a href="#linhagem">Nossa linhagem</a>
+        <a href="#faq">Dúvidas</a>
+        <a class="btn btn-small btn-primary nav-cta" href="#aula-gratis">Agendar aula grátis</a>
+      </nav>
+    </div>
+  </header>
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-photo"><img src="assets/images/treino-hero.png?v=20260923-pegada" alt="" width="1536" height="1024" fetchpriority="high"></div>
+      <div class="container hero-content">
+        <p class="eyebrow"><span class="red-mark"></span> RESPEITO. TÉCNICA. HONRA.</p>
+        <h1 id="hero-title">SEU PRÓXIMO<br>NÍVEL COMEÇA<br><span>NO TATAME.</span></h1>
+        <p class="hero-lead">Mais do que aprender uma arte marcial.<br>Um caminho para construir confiança, disciplina<br class="desktop-break"> e a sua melhor versão.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#aula-gratis">Quero uma aula grátis</a>
+          <a class="hero-secondary" href="#modalidades">Encontre seu treino</a>
+        </div>
+        <div class="hero-bottom"><span><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Do iniciante ao avançado</span><span>Adulto · Feminino · Infantil</span></div>
+      </div>
+      <div class="hero-photo-caption"><span>ARTE SUAVE.<br><strong>MENTE FORTE.</strong></span><small>Imagem ilustrativa de treino</small></div>
+      <a class="hero-scroll" href="#modalidades" aria-label="Conhecer as modalidades"><span>EXPLORE A PAGELS</span></a>
+    </section>
+
+    <div class="values-strip" aria-label="Valores da Pagels"><div class="container"><span>TRADIÇÃO QUE ENSINA</span><span>TÉCNICA QUE TRANSFORMA</span><span>RESPEITO QUE CONECTA</span></div></div>
+
+    <section class="section programs" id="modalidades" aria-labelledby="programas-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">01 / ENCONTRE O SEU CAMINHO</p><h2 id="programas-title">O TATAME É<br><span class="text-red">PARA VOCÊ.</span></h2></div><p>Cada pessoa tem um ponto de partida.<br>Aqui, você encontra espaço para começar<br>e orientação para continuar evoluindo.</p></div>
+        <div class="program-grid">
+          <article class="program-card" id="adulto">
+            <div class="program-top"><span class="program-number">01</span><svg class="program-icon" aria-hidden="true"><use href="#i-bolt"/></svg><span class="program-tag">TODOS OS NÍVEIS</span></div>
+            <div class="program-body"><h3>JIU-JITSU ADULTO</h3><p>Desafie seus limites, aprenda defesa pessoal e evolua a cada treino. Do primeiro contato à próxima faixa.</p><ul class="mini-list"><li>Fundamentos e técnica</li><li>Condicionamento e confiança</li></ul><a class="card-link" href="#aula-gratis" data-aula="adulto">Esse é o meu treino</a></div>
+          </article>
+          <article class="program-card program-featured">
+            <div class="program-top"><span class="program-number">02</span><svg class="program-icon" aria-hidden="true"><use href="#i-shield"/></svg><span class="program-tag">FORÇA EM CONJUNTO</span></div>
+            <div class="program-body"><h3>JIU-JITSU FEMININO</h3><p>Um espaço para desenvolver técnica, autonomia e segurança. Aprenda e compartilhe sua evolução com outras mulheres.</p><ul class="mini-list"><li>Defesa pessoal na prática</li><li>Iniciantes e alunas experientes</li></ul><a class="card-link" href="#aula-gratis" data-aula="feminino">Quero fazer parte</a></div>
+          </article>
+          <article class="program-card">
+            <div class="program-top"><span class="program-number">03</span><svg class="program-icon" aria-hidden="true"><use href="#i-people"/></svg><span class="program-tag">PEQUENOS GRANDES PASSOS</span></div>
+            <div class="program-body"><h3>JIU-JITSU INFANTIL</h3><p>Aprendizado que acompanha o crescimento. Movimento, convivência e novas descobertas dentro do tatame.</p><ul class="mini-list"><li>Disciplina e coordenação</li><li>Respeito e autoconfiança</li></ul><a class="card-link" href="#aula-gratis" data-aula="infantil">Agendar para uma criança</a></div>
+          </article>
+        </div>
+       </div>
+    </section>
+
+    <section class="section story" id="historia" aria-labelledby="historia-title">
+      <div class="container story-grid">
+        <div class="heritage-visual"><span class="heritage-label">PAGELS BRAZILIAN JIU-JITSU</span><span class="heritage-year" aria-hidden="true">1993</span><div class="heritage-logo"><img src="assets/images/logo.webp" alt="Emblema da Pagels Brazilian Jiu-Jitsu" width="900" height="900" loading="lazy"></div><div class="heritage-caption"><span>UMA VIDA DEDICADA À ARTE SUAVE.</span><span>EST. 1993</span></div></div>
+        <div class="story-copy"><p class="eyebrow">02 / A NOSSA ESSÊNCIA</p><h2 id="historia-title">RAÍZES FORTES.<br>EVOLUÇÃO<br><span class="text-red">CONSTANTE.</span></h2><p class="lead">O próximo capítulo dessa história pode ser o seu.</p><p>Sob a liderança do <strong>Mestre Paulo Wesley Lopes</strong>, a Pagels carrega uma trajetória iniciada em 1993 e uma vida dedicada ao Jiu-Jitsu no Sul do Rio de Janeiro.</p><p>Graduado faixa preta pelo Grão-Mestre Francisco Mansor, hoje o faixa coral(7º grau) Mestre Paulo transmite uma tradição que conecta o nosso tatame a Hélio Gracie. Uma base de técnica, respeito e compromisso com cada aluno.</p><a class="text-link" href="#linhagem">Conheça nossa linhagem</a></div>
+      </div>
+    </section>
+
+    <section class="section lineage" id="linhagem" aria-labelledby="linhagem-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">03 / A TRADIÇÃO CONTINUA</p><h2 id="linhagem-title">UMA LINHAGEM.<br><span class="text-red">GERAÇÕES DE HISTÓRIA.</span></h2></div><p>Conhecer de onde viemos<br>dá sentido a cada passo adiante.</p></div>
+        <ol class="lineage-track">
+          <li><div class="lineage-emblem"><img src="assets/images/logo-mestre-helio.jpg" alt="Gracie Jiu-Jitsu Academy" width="1000" height="1000" loading="lazy"></div><span class="lineage-order">01 / GRANDE MESTRE</span><h3>HÉLIO GRACIE</h3><p>A origem da nossa linhagem.</p></li>
+          <li><div class="lineage-emblem"><img src="assets/images/logo-mansor.webp" alt="Grand Master Mansor Brazilian Jiu-Jitsu Association" width="290" height="290" loading="lazy"></div><span class="lineage-order">02 / GRÃO-MESTRE</span><h3>FRANCISCO MANSOR</h3><p>Graduado diretamente por Hélio Gracie.</p></li>
+          <li><div class="lineage-emblem"><img src="assets/images/logo.webp" alt="Pagels Brazilian Jiu-Jitsu" width="900" height="900" loading="lazy"></div><span class="lineage-order">03 / MESTRE</span><h3>PAULO WESLEY LOPES</h3><p>Tradição viva no tatame da Pagels.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section training" id="treino" aria-labelledby="treino-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">04 / MUITO ALÉM DOS GOLPES</p><h2 id="treino-title">O QUE VOCÊ TREINA.<br>O QUE VOCÊ <span class="text-red">LEVA.</span></h2></div><p>O progresso acontece no tatame.<br>Os aprendizados acompanham você.</p></div>
+        <div class="benefits-grid">
+          <article class="benefit"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><h3>Técnica com propósito</h3><p>Fundamentos e defesa pessoal, com aprendizado progressivo e atenção à segurança.</p></article>
+          <article class="benefit"><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg><h3>Corpo em movimento</h3><p>Força, resistência e coordenação trabalhadas em treinos dinâmicos e desafiadores.</p></article>
+          <article class="benefit"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><h3>Mente presente</h3><p>Disciplina, foco e constância para lidar com os desafios de cada nova etapa.</p></article>
+          <article class="benefit"><svg class="icon" aria-hidden="true"><use href="#i-people"/></svg><h3>Evolução em equipe</h3><p>Parceiros de treino que compartilham conhecimento e respeitam o seu ritmo.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section adult-team" id="turma-adulta" aria-labelledby="adulto-title">
+      <div class="container adult-grid">
+        <div class="adult-copy"><p class="eyebrow">TREINO PARA TODOS OS NÍVEIS</p><h2 id="adulto-title">EVOLUA A CADA TREINO.<br><span class="text-red">JUNTO COM A EQUIPE.</span></h2><p>Na turma adulta, iniciantes e praticantes experientes treinam lado a lado, com orientação e respeito ao ritmo de cada aluno.</p><p>Fundamentos, técnica, condicionamento e defesa pessoal fazem parte de um aprendizado construído com constância.</p><ul class="check-list"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Comece mesmo sem experiência</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Treino técnico e progressivo</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Ambiente de respeito e parceria</li></ul><a class="btn btn-primary" href="#aula-gratis" data-aula="adulto">Quero conhecer a turma</a><small class="adult-note">Combine o dia e o horário com a equipe pelo WhatsApp.</small></div>
+        <figure class="adult-photo"><img src="assets/images/turma-adulta.jpeg" alt="Turma adulta da Pagels reunida no tatame" width="1156" height="868" loading="lazy" decoding="async"><figcaption>TURMA ADULTA · PAGELS JIU-JITSU</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section women" id="feminino" aria-labelledby="feminino-title">
+      <div class="container women-grid">
+        <div class="women-copy"><p class="eyebrow">UM ESPAÇO PARA A SUA EVOLUÇÃO</p><h2 id="feminino-title">SUA FORÇA.<br>SEU RITMO.<br><span class="text-red">SEU TATAME.</span></h2><p>Na turma feminina, cada treino é uma oportunidade de aprender, ganhar confiança e construir novas conexões.</p><p>Com o Mestre Paulo Wesley e a instrutora Valéria Ramos, você encontra orientação para dar o primeiro passo ou seguir sua trajetória no Jiu-Jitsu.</p><ul class="check-list"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Você pode começar sem experiência</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Fundamentos e defesa pessoal</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Aprendizado e respeito em conjunto</li></ul><a class="btn btn-primary" href="#aula-gratis" data-aula="feminino">Quero conhecer a turma</a><small class="women-note">Combine o dia e o horário com a equipe pelo WhatsApp.</small></div>
+        <figure class="women-poster"><img src="assets/images/aula-feminina.jpeg" alt="Cartaz da turma feminina da Pagels com Mestre Paulo Wesley e instrutora Valéria Ramos" width="1024" height="1536" loading="lazy" decoding="async"><figcaption>TURMA FEMININA · PAGELS JIU-JITSU</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="kids" id="infantil" aria-labelledby="infantil-title">
+      <div class="container kids-grid">
+        <div class="kids-copy"><p class="eyebrow">GRANDES APRENDIZADOS COMEÇAM CEDO</p><h2 id="infantil-title">PEQUENOS NO TAMANHO.<br>GIGANTES <span>NA EVOLUÇÃO.</span></h2><p>Aprender a respeitar, cooperar e confiar em si. No Jiu-Jitsu infantil, cada conquista vai além de uma nova técnica.</p><a class="btn btn-light" href="#aula-gratis" data-aula="infantil">Agendar aula infantil</a><small>Consulte as faixas etárias e turmas com a equipe.</small></div>
+        <figure class="kids-photo"><img src="assets/images/turma-infantil.jpeg" alt="Turma infantil da Pagels reunida no tatame" width="1280" height="719" loading="lazy" decoding="async"><figcaption>TURMA INFANTIL · PAGELS JIU-JITSU</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section conversion" id="aula-gratis" aria-labelledby="agendar-title">
+      <div class="container conversion-grid">
+        <div class="conversion-copy"><p class="eyebrow"><span class="red-mark"></span> O PRIMEIRO PASSO É SEU</p><h2 id="agendar-title">A PRIMEIRA<br>AULA É <span class="text-red">GRÁTIS.</span><br>A EVOLUÇÃO<br>É PRA VIDA.</h2><p>Conheça a equipe, sinta o treino e descubra<br class="desktop-break"> o seu lugar no tatame.</p>
+          <ol class="booking-steps"><li><span>01</span><div><strong>Escolha a sua modalidade</strong><p>Conte um pouco sobre você no formulário.</p></div></li><li><span>02</span><div><strong>Combine pelo WhatsApp</strong><p>A equipe confirma o dia e o horário com você.</p></div></li><li><span>03</span><div><strong>Venha viver o primeiro treino</strong><p>Conheça de perto a experiência Pagels.</p></div></li></ol>
+        </div>
+        <div class="form-card">
+          <div class="form-heading"><span class="form-kicker">VAMOS COMEÇAR?</span><h3>RESERVE SEU PRIMEIRO TREINO.</h3><p>É rápido. A gente combina os detalhes pelo WhatsApp.</p></div>
+          <form id="aulaForm" novalidate>
+            <fieldset class="booking-type"><legend>Para quem é a aula?</legend><div class="booking-options">
+              <label class="booking-option"><input type="radio" name="tipoAula" value="adulto" checked><span class="booking-option-card"><strong>Adulto</strong><small>Para mim</small></span></label>
+              <label class="booking-option"><input type="radio" name="tipoAula" value="feminino"><span class="booking-option-card"><strong>Feminino</strong><small>Para mulheres</small></span></label>
+              <label class="booking-option"><input type="radio" name="tipoAula" value="infantil"><span class="booking-option-card"><strong>Infantil</strong><small>Para uma criança</small></span></label>
+            </div></fieldset>
+            <div class="form-group"><label for="nome" id="nomeLabel">Nome completo</label><input id="nome" name="nome" type="text" autocomplete="name" placeholder="Como podemos te chamar?" required minlength="2" maxlength="150" aria-describedby="nomeError"><small class="field-error" id="nomeError"></small></div>
+            <div class="kids-form-fields" id="kidsFormFields" hidden>
+              <div class="form-group"><label for="nomeCrianca">Nome da criança</label><input id="nomeCrianca" name="nomeCrianca" type="text" autocomplete="off" placeholder="Nome de quem vai treinar" minlength="2" maxlength="150" aria-describedby="nomeCriancaError"><small class="field-error" id="nomeCriancaError"></small></div>
+              <div class="form-group"><label for="idadeCrianca">Idade da criança <span>(opcional)</span></label><input id="idadeCrianca" name="idadeCrianca" type="number" inputmode="numeric" min="1" max="17" step="1" placeholder="Ex.: 8" aria-describedby="idadeCriancaError"><small class="field-error" id="idadeCriancaError"></small></div>
+            </div>
+            <div class="form-group"><label for="nivel" id="nivelLabel">Nível de experiência</label><select id="nivel" name="nivel" required aria-describedby="nivelError"><option value="">Selecione seu nível</option><option value="Nunca treinei (Iniciante)">Nunca treinei (Iniciante)</option><option value="Faixa Branca">Faixa Branca</option><option value="Faixa Azul">Faixa Azul</option><option value="Faixa Roxa">Faixa Roxa</option><option value="Faixa Marrom">Faixa Marrom</option><option value="Faixa Preta">Faixa Preta</option></select><small class="field-error" id="nivelError"></small></div>
+            <button class="btn btn-primary btn-full" id="submitButton" type="submit">Quero fazer uma aula grátis</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite" aria-atomic="true"></p>
+            <a class="btn btn-whatsapp btn-full" id="whatsappContinue" href="https://wa.me/5521988519433" target="_blank" rel="noopener noreferrer" hidden>Continuar no WhatsApp <svg class="icon whatsapp-icon" aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
+            <p class="form-disclaimer" id="formDisclaimer">Você continua no WhatsApp para confirmar o dia e o horário.</p>
+            <p class="form-privacy">Usamos os dados informados para atender à sua solicitação de aula experimental.</p>
+          </form>
+          <noscript><p class="noscript-message">Para agendar, <a href="https://wa.me/5521988519433" target="_blank" rel="noopener noreferrer">fale diretamente com a equipe no WhatsApp</a>.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-grid"><div class="faq-heading"><p class="eyebrow">05 / PODE PERGUNTAR</p><h2 id="faq-title">TODO COMEÇO<br>TEM <span class="text-red">DÚVIDAS.</span></h2><p>A gente ajuda você a dar o primeiro passo.</p><a class="text-link" href="https://wa.me/5521988519433" target="_blank" rel="noopener noreferrer">Conversar com a equipe</a></div>
+        <div class="faq-list">
+          <details open><summary>Nunca treinei. Posso começar?<span aria-hidden="true"></span></summary><p>Sim. O treino também é para quem nunca pisou no tatame. Você aprende os fundamentos de forma progressiva, com orientação e respeito ao seu ritmo.</p></details>
+          <details><summary>Preciso ter preparo físico?<span aria-hidden="true"></span></summary><p>Você pode conversar com a equipe sobre seu ponto de partida. A prática é progressiva e o treinamento considera os diferentes níveis de experiência dos alunos.</p></details>
+          <details><summary>Como funciona a aula experimental?<span aria-hidden="true"></span></summary><p>Escolha a modalidade e preencha o formulário. Depois, envie a mensagem pelo WhatsApp e combine o dia e o horário com a equipe. A primeira aula é grátis.</p></details>
+          <details><summary>O que devo levar para a primeira aula?<span aria-hidden="true"></span></summary><p>Ao combinar sua aula, a equipe orienta sobre a roupa adequada, o uso do kimono e o que levar. Confirme esses detalhes pelo WhatsApp antes de ir.</p></details>
+          <details><summary>Tem turma feminina e aula para crianças?<span aria-hidden="true"></span></summary><p>Sim! Selecione Feminino ou Infantil no formulário. Na modalidade infantil, informe o nome do responsável e da criança. Consulte as faixas etárias, turmas e horários com a equipe.</p></details>
+          <details><summary>Onde fica a Pagels?<span aria-hidden="true"></span></summary><p>Na Rua Dr. Paulo Monteiro Mendes, 269 - Monte Castelo, em Volta Redonda, RJ. <a href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Dr.%20Paulo%20Monteiro%20Mendes%2C%20269%20-%20Monte%20Castelo%2C%20Volta%20Redonda%20-%20RJ" target="_blank" rel="noopener noreferrer">Veja como chegar.</a></p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit" aria-labelledby="visit-title"><div class="container visit-grid"><div class="visit-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></div><div><p class="eyebrow">NOS ENCONTRAMOS NO TATAME</p><h2 id="visit-title">SEU LUGAR É AQUI.</h2><address>Rua Dr. Paulo Monteiro Mendes, 269 - Monte Castelo · Volta Redonda, RJ</address></div><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Dr.%20Paulo%20Monteiro%20Mendes%2C%20269%20-%20Monte%20Castelo%2C%20Volta%20Redonda%20-%20RJ" target="_blank" rel="noopener noreferrer">Como chegar</a></div></section>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-top"><a class="brand" href="#inicio" aria-label="Pagels — voltar ao início"><span class="brand-emblem"><img src="assets/images/logo.webp" alt="" width="64" height="64" loading="lazy"></span><span class="brand-copy"><strong>PAGELS</strong><small>BRAZILIAN JIU-JITSU</small></span></a><p>TRADIÇÃO NO TATAME.<br><span>EVOLUÇÃO PARA A VIDA.</span></p><a class="footer-contact" href="https://wa.me/5521988519433" target="_blank" rel="noopener noreferrer"><svg class="icon whatsapp-icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Fale com a Pagels</a></div><div class="footer-bottom"><p>© <span id="year">2026</span> Pagels Brazilian Jiu-Jitsu. Todos os direitos reservados.</p><a href="#inicio">VOLTAR AO TOPO</a></div></div></footer>
+  <a class="whatsapp-fab" id="whatsappFab" href="https://wa.me/5521988519433?text=Oi%2C%20vim%20pelo%20site%20e%20quero%20conhecer%20a%20Pagels." target="_blank" rel="noopener noreferrer" aria-label="Falar com a Pagels no WhatsApp"><svg class="icon whatsapp-icon" aria-hidden="true"><use href="#i-whatsapp"/></svg><span>Vamos conversar?</span></a>
+  <div class="mobile-booking" id="mobileBooking"><span>SEU PRIMEIRO TREINO<br><strong>COMEÇA AQUI.</strong></span><a class="btn btn-primary btn-small" href="#aula-gratis">Aula grátis</a></div>
+</body>
+</html>
