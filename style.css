@@ -250,14 +250,19 @@ p + p { margin-top: 18px; }
 .visit address { font-size: 11px; color: var(--muted); font-style: normal; margin-top: 9px; }
 
 .site-footer { background: var(--black); color: white; padding: 44px 0 22px; }
-.footer-top { display: flex; align-items: center; justify-content: space-between; gap: 35px; padding-bottom: 36px; border-bottom: 1px solid #32322e; }
+.footer-top, .footer-bottom { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center; column-gap: clamp(35px, 6vw, 80px); }
+.footer-top > :first-child, .footer-bottom > :first-child { justify-self: start; }
+.footer-top > p, .footer-credit { justify-self: center; text-align: center; }
+.footer-socials, .footer-bottom > a { justify-self: end; }
+.footer-top { padding-bottom: 36px; border-bottom: 1px solid #32322e; }
 .footer-top > p { font: 600 23px/1.1 var(--display); }
 .footer-top > p span { color: #98988e; }
 .footer-socials { display: flex; flex-direction: column; gap: 16px; }
 .footer-contact { display: inline-flex; align-items: center; gap: 11px; font-size: 11px; }
 .footer-contact > .icon:last-child { width: 17px; height: 17px; color: #b2b2a7; }
 .footer-contact:hover { color: #ed5558; }
-.footer-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; padding-top: 20px; font-size: 9px; color: #a6a69b; }
+.footer-bottom { row-gap: 20px; padding-top: 20px; font-size: 9px; color: #a6a69b; }
+.footer-bottom > p { margin: 0; }
 .footer-bottom a { font-size: 8px; letter-spacing: 1px; }
 .footer-credit a { font-size: inherit; letter-spacing: normal; color: white; text-decoration: underline; text-underline-offset: 3px; }
 .footer-credit a:hover { color: #ed5558; }
@@ -267,6 +272,9 @@ p + p { margin-top: 18px; }
 .whatsapp-fab .icon { width: 32px; height: 32px; }
 .mobile-booking { display: none; }
 
+@media (min-width: 701px) {
+  .footer-bottom > a { transform: translateX(-65px); }
+}
 @media (min-width: 1500px) { .hero-photo { left: 30%; } }
 @media (max-width: 1100px) {
   .container { width: calc(100% - 64px); }
@@ -340,7 +348,7 @@ p + p { margin-top: 18px; }
   .booking-option-card strong { font-size: 11px; }
   .booking-option-card small { font-size: 7px; }
   .faq-grid { gap: 35px; }
-  .footer-top { gap: 20px; }
+  .footer-top, .footer-bottom { column-gap: 20px; }
   .footer-top > p { font-size: 21px; }
 }
 
@@ -459,10 +467,12 @@ p + p { margin-top: 18px; }
   .visit-icon { display: none; }
   .visit .btn { justify-self: start; font-size: 12px; min-height: 48px; padding: 12px 18px; }
   .visit address { max-width: 280px; font-size: 11px; }
-  .footer-top { flex-wrap: wrap; gap: 26px; padding-bottom: 27px; }
+  .footer-top, .footer-bottom { grid-template-columns: minmax(0, 1fr); text-align: center; }
+  .footer-top > :first-child, .footer-bottom > :first-child, .footer-socials, .footer-bottom > a { justify-self: center; }
+  .footer-top { gap: 26px; padding-bottom: 27px; }
   .footer-top > p { font-size: 19px; }
   .footer-contact { width: 100%; }
-  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 13px; }
+  .footer-bottom { gap: 13px; }
   .footer-bottom p { font-size: 8px; }
   .whatsapp-fab { right: 17px; bottom: calc(95px + env(safe-area-inset-bottom)); width: 52px; height: 52px; padding: 0; justify-content: center; }
   .whatsapp-fab span { display: none; }
